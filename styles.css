@@ -1,0 +1,400 @@
+html {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+body {
+    display: grid;
+    grid-template: 6rem 15rem auto auto 27rem auto / auto auto auto auto auto auto;
+    background-color: rgb(25, 25, 25);
+    position: relative;
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgb(112, 96, 255);
+}
+
+
+/* Header */
+
+header {
+    grid-column: 1 / span 6;
+    max-width: 100%;
+    min-width: 22.5rem;
+    background-image: url("https://wallpapercave.com/wp/wp3342050.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+
+.home-button img {
+    height: 5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+}
+
+.page-title h2 {
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    font-weight: 700;
+    padding-left: .5rem;
+    padding-bottom: .5rem;
+}
+
+.page-title h2 a:hover {
+    color: white;
+}
+
+.container .links {
+    flex-grow: 4;
+    padding-right: 2rem;
+}
+
+.links .events-button {
+    display: inline-block;
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    padding-left: 2rem;
+    padding-bottom: .5rem;
+}
+
+.links .community-button {
+    display: inline-block;
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    padding-left: .5rem;
+    padding-bottom: .5rem;
+}
+
+.container .join-button {
+    padding-right: 2rem;
+    padding-bottom: .5rem;
+}
+
+.join-button h4 {
+    background-color: blueviolet;
+    text-align: center;
+    width: 3rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    padding-bottom: .5rem;
+    transition: background-color .5s;
+}
+
+.join-button h4:hover {
+    background-color:rgb(112, 96, 255)
+}
+
+.join-button a:hover {
+    color: white;
+}
+
+@media only screen and (max-width: 640px) {
+    .container .links {
+        visibility: hidden;
+        flex-grow: 1;
+        flex-shrink: 4;
+        font-size: .1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .home-button img {
+        width: 3rem;
+        height: 3rem;
+        padding-top: .5rem;
+        padding-left: 1rem;
+    }
+
+    .page-title h2 {
+        font-size: 1.25rem;
+        padding-top: .4rem;
+    }
+
+    .container .join-button {
+        padding-top: .5rem;
+    }
+}
+
+
+/* Splash */
+
+.splash {
+    grid-column: 1 / span 6;
+    grid-row: 2 / span 1;
+    height: 35rem;
+}
+
+.splash:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    width: 100%;
+    height: 30rem;
+    opacity: .6;
+    background-image: url("resources/images/clan-up.jpeg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+/*
+.splash .container {
+    position: relative;
+    background-color: white;
+    mix-blend-mode: soft-light;
+}
+
+.splash-txt {
+    text-align: center;
+    padding-top: .02rem;
+    padding-bottom: .02rem;
+    margin: 10rem auto;
+}
+
+.splash-txt h3 {
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(186, 66, 255);
+    mix-blend-mode: none;
+}
+*/
+
+@media only screen and (max-width: 360px) {
+    .splash .container {
+        visibility: hidden;
+    }
+}
+
+
+/* Statement */
+
+.statement {
+    position: relative;
+    grid-column: 1 / span 6;
+    grid-row: 3 / span 1;
+    background-color:rgb(186, 66, 255);
+    top: 13rem;
+    overflow: hidden;
+}
+
+.statement .container {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 5rem;
+}
+
+.big-text {
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: .25rem;
+}
+
+.container p {
+    margin-top: 0rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .big-text {
+        font-size: 1rem;
+    }
+}
+
+
+/* Pics Wall*/
+
+.pic-wall {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 6;
+    background-color:rgb(25, 25, 25);
+    margin-top: 15rem;
+    max-width: 100%;
+    max-height: auto;
+    overflow: hidden;
+}
+
+.container .pictures {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.pictures img {
+    display: block;
+    max-width: 300px;
+    height: auto;
+    padding: 0 .5rem;
+}
+
+@media only screen and (max-width: 1050px) {
+    .container .pictures {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .pictures img {
+        max-width: 80%;
+        max-height: auto;
+        margin: .5rem auto;
+    }
+}
+
+
+/* Events */
+
+.events {
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 4;
+    background-color:rgb(76, 76, 76);
+}
+
+.events .container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-items:first baseline;
+    margin: auto 1rem auto 5rem;
+
+}
+
+.events h2 {
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.event-list {
+    display: inline-flex;
+    justify-content: left;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.event-list .event-post {
+    background-color: rgb(25, 25, 25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10rem;
+    max-height: 18rem;
+    padding: 1rem 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.event-list img {
+    display: block;
+    width: 10rem;
+    height: auto;
+}
+
+.event-post h3 {
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    text-align: center;
+
+}
+
+.event-post p {
+    font-size: .9rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 805px) {
+    #discord-post {
+        visibility: hidden;
+        width: 0%;
+        height: auto;
+    }
+}
+
+/* Community */
+
+.sign-up {
+    grid-row: 5 / span 1;
+    grid-column: 5 / span 2;
+    background-color: rgb(112, 96, 255);
+    margin-left: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .5s;
+}
+
+
+.sign-up:hover {
+    background-color: rgb(255, 96, 96);
+}
+
+.sign-up .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem .5rem;
+}
+
+.sign-up .container img {
+    width: 7rem;
+}
+
+.sign-up h1 {
+    text-align: center;
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    font-size: 1.5rem;
+}
+
+.sign-up h3 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0 .5rem;
+    margin-top: 0;
+}
+
+.sign-up a:hover {
+    color: white;
+
+}
+
+@media only screen and (max-width: 580px) {
+    .events {
+        grid-column: 1 / span 6;
+        z-index: 5;
+    }
+}
+
+/* Footer */
+
+footer {
+    grid-row: 6 / span 1;
+    grid-column: 1 / span 6;
+    background-color:rgb(25, 25, 25)
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 1rem 1rem;
+}
+
+footer h4 {
+    padding-left: 1rem;
+}
